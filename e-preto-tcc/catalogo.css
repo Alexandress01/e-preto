@@ -1,0 +1,423 @@
+/* ===== ESTILOS DA PÁGINA CATÁLOGO ===== */
+
+/* ===== HERO CATÁLOGO ===== */
+.catalogo-hero {
+    margin-top: 70px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('images/banner-padrao.jpeg') center/cover no-repeat;
+    /* MODIFICAR: Trocar imagem de fundo acima (URL) */
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalogo-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.catalogo-hero p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Garantir que o catálogo use a mesma formatação do .hero */
+.catalogo-hero .hero-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* ===== GALERIA SECTION ===== */
+.galeria-section {
+    padding: 80px 20px;
+    background-color: #5e350d;
+}
+
+.galeria-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+/* ===== GALERIA WRAPPER (container do scroll) ===== */
+.galeria-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: #884e13;
+}
+
+.galeria-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 0;
+}
+
+/* ===== ITEM DA GALERIA ===== */
+.galeria-item {
+    min-width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== PLACEHOLDER DA OBRA ===== */
+.obra-placeholder {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border: 3px dashed #d4af37;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #999;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.galeria-item:hover .obra-placeholder {
+    border-color: #8b0000;
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+}
+
+/* Quando tiver imagem, usar isso */
+.obra-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+/* ===== TÍTULOS E DESCRIÇÃO DA OBRA ===== */
+.obra-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #d4af37;
+    text-align: center;
+    margin: 0;
+}
+
+.obra-descricao {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* ===== BOTÕES DE NAVEGAÇÃO ===== */
+.galeria-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.galeria-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.btn-prev {
+    left: -70px;
+}
+
+.btn-next {
+    right: -70px;
+}
+
+/* ===== INDICADOR DE PROGRESSO ===== */
+.galeria-info {
+    text-align: center;
+    margin: 30px 0;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.galeria-info span {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* ===== PONTOS DE NAVEGAÇÃO (DOTS) ===== */
+.galeria-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dot:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background-color: var(--secondary-color);
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+    .btn-prev {
+        left: -60px;
+    }
+
+    .btn-next {
+        right: -60px;
+    }
+
+    .galeria-item {
+        padding: 30px;
+    }
+
+    .obra-placeholder {
+        max-width: 400px;
+    }
+
+    .obra-titulo {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalogo-hero h1 {
+        font-size: 40px;
+    }
+
+    .catalogo-hero p {
+        font-size: 16px;
+    }
+
+    .galeria-section {
+        padding: 60px 20px;
+    }
+
+    .galeria-item {
+        padding: 25px;
+    }
+
+    .obra-placeholder {
+        max-width: 100%;
+        aspect-ratio: 1;
+    }
+
+    /* Botões se sobrepõem à galeria em mobile */
+    .btn-prev {
+        left: 10px;
+        background-color: rgba(212, 175, 55, 0.9);
+    }
+
+    .btn-next {
+        right: 10px;
+        background-color: rgba(212, 175, 55, 0.9);
+    }
+
+    .btn-prev:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .btn-next:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .obra-titulo {
+        font-size: 20px;
+    }
+
+    .obra-descricao {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo-hero {
+        padding: 60px 20px;
+    }
+
+    .catalogo-hero h1 {
+        font-size: 28px;
+    }
+
+    .catalogo-hero p {
+        font-size: 14px;
+    }
+
+    .galeria-item {
+        padding: 20px;
+    }
+
+    .galeria-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .btn-prev {
+        left: 5px;
+    }
+
+    .btn-next {
+        right: 5px;
+    }
+
+    .obra-titulo {
+        font-size: 18px;
+    }
+
+    .obra-descricao {
+        font-size: 13px;
+    }
+
+    .galeria-info {
+        font-size: 14px;
+    }
+}
+
+/* ===== EFEITO SWIPE (toque em mobile) ===== */
+@media (hover: none) and (pointer: coarse) {
+    .galeria-wrapper {
+        cursor: grab;
+    }
+
+    .galeria-wrapper.dragging {
+        cursor: grabbing;
+    }
+}
+
+/* ===== STYLES DO MODAL DE OBRA ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-in-out;
+}
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-content {
+    max-width: 1100px;
+    width: 95%;
+    max-height: 92vh;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+.modal-content img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    background: #111;
+}
+.modal-caption {
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 6px;
+    max-height: 18vh;
+    overflow: auto;
+}
+.modal-caption h3 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+.modal-caption p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.modal-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #fff;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    .modal-caption h3 { font-size: 18px; }
+    .modal-caption p { font-size: 14px; }
+}

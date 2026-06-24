@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>É Preto - Valorização da Cultura Negra</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo"><img src="images/logo-e-preto.png" alt="logo" width="180" height="180"></div>
+            
+            <!-- Menu hambúrguer -->
+            <div class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+            
+            <!-- Links de navegação -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="museu.html">Museu</a></li>
+                <li><a href="catálogo.html">Catálogo</a></li>
+                <li><a href="conteudos.html">Conteúdos</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="inicio">
+        <!-- Imagem de fundo com overlay -->
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Descubra a Cultura e os Saberes Negros</h1>
+            <p class="hero-subtitle">Uma jornada através da história, tradições e arte dos povos que a educação formal não explora.</p>
+            <a href="#explorar" class="btn btn-primary">Explorar</a>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO DE CARDS ===== -->
+    <section class="cards-section" id="explorar">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O que você vai encontrar</h2>
+                <p class="section-subtitle">Explore um rico acervo sobre diversidade cultural</p>
+            </div>
+
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-icon">🏛️</div>
+                    <h3 class="card-title">Museu 360º Virtual</h3>
+                    <p class="card-description">Acervo digital com obras, artefatos e documentos históricos dos povos africanos e originários.</p>
+                    <!-- MODIFICAR: Link do museu virtual aqui -->
+                    <a href="museu.html" class="card-link">Acessar Museu →</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3 class="card-title">Catálogo</h3>
+                    <p class="card-description">Conheça as diferentes culturas, manifestações artísticas e saberes dos povos invisibilizados.</p>
+                    <!-- MODIFICAR: Link para seção de culturas -->
+                    <a href="catálogo.html" class="card-link">Explorar Catálogo →</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3 class="card-title">Conteúdos</h3>
+                    <p class="card-description">Narrativas e documentações que resgatam histórias apagadas pela invisibilização histórica.</p>
+                    <!-- MODIFICAR: Link para seção de história -->
+                    <a href="conteudos.html" class="card-link">Ler Conteúdos →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-project">É Preto - Projeto Educacional</p>
+                <!-- MODIFICAR: Nome da turma/grupo -->
+                <p class="footer-group">Turma: INF 3MA</p>
+                <!-- MODIFICAR: Ano do projeto -->
+                <p class="footer-year">© 2026 - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

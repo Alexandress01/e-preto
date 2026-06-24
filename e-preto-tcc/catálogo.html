@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - É Preto</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo"><img src="images/logo-e-preto.png" alt="logo" width="180" height="180"></div>
+            
+            <!-- Menu hambúrguer -->
+            <div class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+            
+            <!-- Links de navegação -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="museu.html">Museu</a></li>
+                <!-- MODIFICAR: Link para página de museu -->
+                <li><a href="catálogo.html" style="color: #d4af37;">Catálogo</a></li>
+                <li><a href="conteudos.html">Conteúdos</a></li>
+                <!-- MODIFICAR: Link para página de história -->
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <!-- MODIFICAR: Link para página sobre -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== PÁGINA DE CATÁLOGO ===== -->
+    <section class="hero catalogo-hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Diversidade Cultural</h1>
+            <p class="hero-subtitle">Explore obras e expressões dos povos africanos e originários</p>
+        </div>
+    </section>
+
+    <!-- ===== GALERIA CARROSSEL ===== -->
+    <section class="galeria-section">
+        <div class="container">
+            <div class="galeria-container">
+                <div class="galeria-wrapper">
+                    <div class="galeria-track" id="galeríaTrack">
+                        <!-- As obras serão adicionadas aqui -->
+                        <!-- MODIFICAR: Trocar pelos quadrados de placeholder de imagens -->
+                        
+                        <!-- Obra 1 -->
+                        <div class="galeria-item">
+                            <div class="obra-placeholder"><img src="obras/Recomeço-ou-fim-lazaro.jpg" alt="Recomeço ou Fim" data-title="Recomeço ou Fim" data-description="Contexto: A responsabilidade ambiental, assemelhada à representação de nossas irmãs zelando por um bebê, sinônimo da Terra, é uma obrigação universal que deve ser seguida para apresentarmos um novo recomeço ou uma tentativa de assegurar a nossa mãe Terra, que já grita e avisa que está morrendo devido à irresponsabilidade da sociedade mundial em não zelar pela fauna e flora, ocasionando a limitação dos recursos naturais."></div>
+                            <h3 class="obra-titulo">Recomeço ou Fim</h3>
+                            <p class="obra-autor">Autor: Lázaro França</p>
+                        </div>
+
+                        <!-- Obra 2 -->
+                        <div class="galeria-item">
+                            <div class="obra-placeholder"><img src="obras/Meio-e-fim-lazaro.jpg" alt="Meio e Fim" data-title="Meio e Fim" data-description="Contexto: Virgulino Ferreira da Silva, mais conhecido na atualidade como Lampião, juntamente com seu bando de cangaceiros, tinha um meio péssimo para que a justiça fosse efetuada no interior do Nordeste brasileiro, matando e roubando grandes fazendeiros, a fim de fazer com que os responsáveis pelos trabalhadores que eram explorados pagassem. (Meio péssimo, no entanto, finalidade excelente). Do outro lado, temos a Constituição e a Justiça brasileira, cuja finalidade é assegurar o direito de todos os cidadãos e seres presentes no território. O meio é a busca e apreensão dos criminosos, que diversas vezes não é fiscalizado quanto ao cumprimento das leis e à execução das penas, havendo o não cumprimento destas. No presente, estamos presenciando a Justiça brasileira (representada na obra pela escolha das cores de acordo com a bandeira do Brasil) ser falha, com meios que não são executados, enquanto presenciamos outros &quot;lampiões&quot;, com meios péssimos, porém com uma justiça mais efetiva."></div>
+                            <h3 class="obra-titulo">Meio e Fim</h3>
+                            <p class="obra-autor">Autor: Lázaro França</p>
+                        </div>
+
+                        <!-- Obra 3 -->
+                        <div class="galeria-item">
+                            <div class="obra-placeholder"><img src="obras/Fe-unico-alimento-lazaro.jpg" alt="Fé, Único Alimento" data-title="Fé, Único Alimento" data-description="Contexto: A obra demonstra um menino com suas costelas marcadas pela desnutrição. Nesse contexto, a fé se apresenta pela necessidade como único alimento, pela ausência de alimento na mesa do jovem ou pela ausência de oportunidades e carinho oferecidos pelos seus responsáveis. Devido o jovem ser órfão, gera-se a perspectiva de um sonho de um futuro que pode não ser alcançável, pela exclusão de oportunidades ao jovem. Portanto, fé não é uma escolha, independente qual seja, para o menino é uma necessidade de diferentes fomes de um presente e do seu futuro."></div>
+                            <h3 class="obra-titulo">Fé, Único Alimento</h3>
+                            <p class="obra-autor">Autor: Lázaro França</p>
+                        </div>
+
+                        <!-- Obra 4 -->
+                        <div class="galeria-item">
+                            <div class="obra-placeholder"><img src="obras/Migueldaconceicao01.jpg" alt="O Ouvires"></div>
+                            <h3 class="obra-titulo">O Ouvires</h3>
+                            <p class="obra-autor">Autor: Miguel Conceição</p>
+                        </div>
+
+                        <!-- Obra 5 -->
+                        <div class="galeria-item">
+                            <div class="obra-placeholder"><img src="obras/Migueldaconceicao02.jpg" alt="Abaeté"></div>
+                            <h3 class="obra-titulo">Abaeté</h3>
+                            <p class="obra-autor">Autor: Miguel Conceição</p>
+                        </div>
+
+                        <!-- Obra 6 -->
+                        <div class="galeria-item">
+                            <div class="obra-placeholder"><img src="obras/Migueldaconceicao03.jpg" alt="Estudo sobre Iemanjá"></div>
+                            <h3 class="obra-titulo">Estudo sobre Iemanjá</h3>
+                            <p class="obra-autor">Autor: Miguel Conceição</p>
+                        </div>
+
+                        <!-- Obra 7 -->
+                        <div class="galeria-item">
+                            <div class="obra-placeholder"><img src="obras/Migueldaconceicao04.jpg" alt="Cabeça de Rei"></div>
+                            <h3 class="obra-titulo">Cabeça de Rei</h3>
+                            <p class="obra-autor">Autor: Miguel Conceição</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles de navegação -->
+                <button class="galeria-btn btn-prev" id="btnPrev">
+                    <span>❮</span>
+                </button>
+                <button class="galeria-btn btn-next" id="btnNext">
+                    <span>❯</span>
+                </button>
+            </div>
+
+            <!-- Indicador de progresso -->
+            <div class="galeria-info">
+                <p>Obra <span id="obraAtual">1</span> de <span id="totalObras">8</span></p>
+            </div>
+
+            <!-- Pontos de navegação -->
+            <div class="galeria-dots" id="galeríaDots"></div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-project">É Preto - Projeto Educacional</p>
+                <!-- MODIFICAR: Nome da turma/grupo -->
+                <p class="footer-group">Turma: INF 3MA</p>
+                <!-- MODIFICAR: Ano do projeto -->
+                <p class="footer-year">© 2026 - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <!-- Modal de visualização da obra -->
+    <div id="obraModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+            <img id="modalImage" src="" alt="Imagem da obra">
+            <div class="modal-caption">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="catalogo.js"></script>
+</body>
+</html>
