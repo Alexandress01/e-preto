@@ -124,8 +124,7 @@ body {
 .hero {
     margin-top: 70px;
     height: calc(100vh - 70px);
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('images/banner-padrao.jpeg') center/cover no-repeat;
+    background: url('images/banner-home-page.jpeg') center/cover no-repeat;
     /* MODIFICAR: Trocar imagem de fundo acima (URL) */
     display: flex;
     align-items: center;
