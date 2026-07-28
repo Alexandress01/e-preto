@@ -122,63 +122,50 @@ body {
 
 /* ===== HERO SECTION ===== */
 .hero {
+    position: relative;
     margin-top: 70px;
-    height: calc(100vh - 70px);
-    background: url('images/banner-home-page.jpeg') center/cover no-repeat;
-    /* MODIFICAR: Trocar imagem de fundo acima (URL) */
+    min-height: calc(100vh - 70px);
+    min-height: 100svh;
+    padding: 60px 20px;
+    background-color: #000;
+    background-image:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.75) 100%),
+        url('images/banner-home-page.jpeg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
     color: var(--white);
+    overflow: hidden;
 }
 
-.hero.hero-museu {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('images/banner-padrao.jpeg') center/cover no-repeat;
-}
-
-.hero.hero-conteudos {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('images/banner-padrao.jpeg') center/cover no-repeat;
-}
-
+.hero.hero-museu,
+.hero.hero-conteudos,
 .hero.hero-sobre {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('images/banner-padrao.jpeg') center/cover no-repeat;
+    background-image:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.75) 100%),
+        url('images/banner-padrao.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--overlay-color);
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 10;
+    z-index: 2;
     max-width: 800px;
-    padding: 20px;
+    padding: 20px clamp(16px, 4vw, 32px);
     animation: fadeInUp 1s ease-out;
-}
-
-.hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 64px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero-subtitle {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 40px;
-    line-height: 1.6;
 }
 
 /* Botão principal */
@@ -409,17 +396,20 @@ body {
 
     /* Hero responsivo */
     .hero {
-        height: auto;
-        min-height: 600px;
+        min-height: 70vh;
         padding: 60px 20px;
     }
 
+    .hero-content {
+        max-width: 100%;
+    }
+
     .hero-title {
-        font-size: 42px;
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
     }
 
     .hero-subtitle {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     /* Cards responsivo */
