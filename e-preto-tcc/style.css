@@ -130,7 +130,7 @@ body {
     background-color: #000;
     background-image:
         linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.75) 100%),
-        url('images/banner-home-page.jpeg');
+        url('images/banner-com-israel.jpeg');
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -158,14 +158,6 @@ body {
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.35) 100%);
     z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 20px clamp(16px, 4vw, 32px);
-    animation: fadeInUp 1s ease-out;
 }
 
 /* Botão principal */
